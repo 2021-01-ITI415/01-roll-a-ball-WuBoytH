@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("PickUp"))
         {
-            other.gameObject.SetActive(false);
+            Vector3 randomPos = new Vector3(Random.Range(-1.8f, 1.8f), 0.5f, Random.Range(-1.8f, 1.8f));
+            other.gameObject.transform.position = randomPos;
             count++;
             SetCountText();
         }
